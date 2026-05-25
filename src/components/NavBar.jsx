@@ -3,14 +3,14 @@ import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 
 const CATEGORIES = [
-  { label: '103 / Mbk',          path: '/catalogue/103-mbk' },
-  { label: 'Vespa / Scooter',    path: '/catalogue/vespa-scooter' },
-  { label: 'Vélo / Bicyclette',  path: '/catalogue/velo' },
-  { label: 'Pièces Générales',   path: '/catalogue/pieces-generales' },
-  { label: 'Échappements',       path: '/catalogue/echappements' },
-  { label: 'Freins & Roues',     path: '/catalogue/freins-roues' },
-  { label: 'Éclairage',          path: '/catalogue/eclairage' },
-  { label: 'Accessoires',        path: '/catalogue/accessoires' },
+  { label: '103 / Mbk',          slug: '103-mbk' },
+  { label: 'Vespa / Scooter',    slug: 'vespa-scooter' },
+  { label: 'Vélo / Bicyclette',  slug: 'velo' },
+  { label: 'Pièces Générales',   slug: 'pieces-generales' },
+  { label: 'Échappements',       slug: 'echappements' },
+  { label: 'Freins & Roues',     slug: 'freins-roues' },
+  { label: 'Éclairage',          slug: 'eclairage' },
+  { label: 'Accessoires',        slug: 'accessoires' },
 ]
 
 export default function Navbar() {
@@ -41,10 +41,10 @@ export default function Navbar() {
 
           {dropdownOpen && (
             <ul className="dropdown-menu">
-              {CATEGORIES.map(cat => (
-                <li key={cat.path}>
+             {CATEGORIES.map(cat => (
+                <li key={cat.slug}>
                   <NavLink
-                    to={cat.path}
+                    to={`/catalogue?category=${cat.slug}`}
                     onClick={() => setDropdownOpen(false)}
                   >
                     {cat.label}

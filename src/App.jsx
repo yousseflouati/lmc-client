@@ -13,15 +13,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
-        <Route path="/catalogue"                  element={<CatalogPage />} />
-        <Route path="/catalogue/103-mbk"          element={<CatalogPage />} />
-        <Route path="/catalogue/vespa-scooter"    element={<CatalogPage />} />
-        <Route path="/catalogue/velo"             element={<CatalogPage />} />
-        <Route path="/catalogue/pieces-generales" element={<CatalogPage />} />
-        <Route path="/catalogue/echappements"     element={<CatalogPage />} />
-        <Route path="/catalogue/freins-roues"     element={<CatalogPage />} />
-        <Route path="/catalogue/eclairage"        element={<CatalogPage />} />
-        <Route path="/catalogue/accessoires"      element={<CatalogPage />} />
+        <Route path="/catalogue" element={<CatalogPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/catalog" element={<CatalogPage />} />
